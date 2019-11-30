@@ -10,7 +10,7 @@ using namespace std;
 
 int main()
 {
-	Library lb;
+	/*Library lb;
 
 	Book *c = new VietnamBook();
 	Book *b = new EnglishBook();
@@ -21,17 +21,21 @@ int main()
 	lb.add(c);
 	lb.add(b);
 
-	lb.save("output.txt");
+	lb.save("reader-mana.txt");*/
 
-	/*Reader* rd1 = new Reader();
+	Reader* rd1 = new Reader();
+	Reader* rd2 = new Reader();
 
 	rd1->input();
+	rd2->input();
 
-	rd1->print_bill_borrow();
-	rd1->print_bill_return();
+	ReaderManagement rm;
 
-	cout << "\nDISPLAY\n";
-	rd1->display();*/
+	rm.add(rd1);
+	rm.add(rd2);
+
+	rm.display();
+	rm.save("reader-mana.txt");
 
 	system("pause");
 	return EXIT_SUCCESS;

@@ -35,5 +35,13 @@ public:
 	// Update đọc giả:
 	void update_by_reader_id(string _id);
 	void update_by_reader_name(string _name);
+
+	// Delete đọc giả:
+	void del_by_reader_id(string _id);
+	void del_by_reader_name(string _name);
+
+	// Phương thức load và save đối tượng:
+	void load(string file_name_in);
+	void save(string file_name_out);
 };
 

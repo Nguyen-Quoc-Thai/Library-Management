@@ -36,9 +36,11 @@ public:
 	// Sinh các getter setter:
 	void set_id(string _id);
 	void set_name(string _name);
+	void set_list_book_borrow(vector<InfoBorrow*> _list);
 
 	string get_id();
 	string get_name();
+	vector<InfoBorrow*> get_list_book_borrow();
 
 	// Phiếu mượn sách:
 	void print_bill_borrow();

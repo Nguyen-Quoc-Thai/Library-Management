@@ -1,0 +1,61 @@
+﻿  Book.cpp
+  Controller.cpp
+  EnglishBook.cpp
+  InfoBorrow.cpp
+  Library.cpp
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.h(2,19): warning C4161: #pragma pack(pop...): more pops than pushes
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(144,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(152,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(162,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(172,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(182,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(192,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(211,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(228,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(245,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(262,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(279,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(289,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(302,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(315,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(328,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(341,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(361,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(378,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(395,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(412,20): warning C4018: '<': signed/unsigned mismatch
+  Model.cpp
+  Source.cpp
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.cpp(429,20): warning C4018: '<': signed/unsigned mismatch
+  VietnamBook.cpp
+  View.cpp
+  Generating Code...
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Exrcise2\Library.h(2,19): warning C4161: #pragma pack(pop...): more pops than pushes
+Library.obj : error LNK2005: "public: __thiscall Book::Book(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Book@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall Book::Book(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,double)" (??0Book@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000N@Z) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall Book::Book(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Book@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00@Z) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall Book::Book(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Book@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall Book::Book(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Book@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall Book::Book(void)" (??0Book@@QAE@XZ) already defined in Book.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,double,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000N0@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,double)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000N@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0EnglishBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: __thiscall EnglishBook::EnglishBook(void)" (??0EnglishBook@@QAE@XZ) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: virtual void __thiscall Book::display(void)" (?display@Book@@UAEXXZ) already defined in Book.obj
+Library.obj : error LNK2005: "public: virtual void __thiscall EnglishBook::display(void)" (?display@EnglishBook@@UAEXXZ) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: virtual bool __thiscall EnglishBook::get_type(int)" (?get_type@EnglishBook@@UAE_NH@Z) already defined in EnglishBook.obj
+Library.obj : error LNK2005: "public: virtual void __thiscall Book::input(void)" (?input@Book@@UAEXXZ) already defined in Book.obj
+Library.obj : error LNK2005: "public: virtual void __thiscall EnglishBook::input(void)" (?input@EnglishBook@@UAEXXZ) already defined in EnglishBook.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0VietnamBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,double)" (??0VietnamBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@000N@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0VietnamBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0VietnamBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0VietnamBook@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: __thiscall VietnamBook::VietnamBook(void)" (??0VietnamBook@@QAE@XZ) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: virtual void __thiscall VietnamBook::display(void)" (?display@VietnamBook@@UAEXXZ) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: virtual bool __thiscall VietnamBook::get_type(int)" (?get_type@VietnamBook@@UAE_NH@Z) already defined in Library.obj
+VietnamBook.obj : error LNK2005: "public: virtual void __thiscall VietnamBook::input(void)" (?input@VietnamBook@@UAEXXZ) already defined in Library.obj
+C:\Users\ASUS\source\repos\18120554_Nguyen_Quoc_Thai\Debug\Exrcise2.exe : fatal error LNK1169: one or more multiply defined symbols found

@@ -1,4 +1,10 @@
-#include "ReaderManagement.h"
+﻿#include "ReaderManagement.h"
+#include"EnglishBook.h"
+#include"VietnamBook.h"
+
+#include<fstream>
+#include<iostream>
+using namespace std;
 
 ReaderManagement::ReaderManagement()
 {
@@ -71,6 +77,84 @@ void ReaderManagement::update_by_reader_name(string _name)
 	for (int i = 0; i < _dummy.size(); i++) {
 		cout << "*UPDATE BOOK " << i + 1 << endl;
 		update_menu(_dummy.at(i));
+	}
+}
+
+void ReaderManagement::del_by_reader_id(string _id)
+{
+	for (int i = 0; i < list_reader.size(); i++) {
+		if (list_reader.at(i)->get_id()._Equal(_id)) {
+			list_reader.erase(list_reader.begin() + i);
+			i--;
+		}
+	}
+}
+
+void ReaderManagement::del_by_reader_name(string _name)
+{
+	for (int i = 0; i < list_reader.size(); i++) {
+		if (list_reader.at(i)->get_name()._Equal(_name)) {
+			list_reader.erase(list_reader.begin() + i);
+			i--;
+		}
+	}
+}
+
+void ReaderManagement::load(string file_name_in)
+{
+
+}
+
+
+/* Trình tự ghi xuống file sẽ là:
+
+* Bắt đầu với kí tự đánh dấu là '#'
+* Tiếp theo ghi reader ID
+* Tiếp theo ghi reader Name
+
+while()
+
+* Ghi reader Date
+* Ghi 1 or 0 thể hiện sách là Việt Nam hay English
+* Ghi các thuộc tính tương ứng với từng loại sách
+
+*/
+void ReaderManagement::save(string file_name_out)
+{
+	ofstream out_file;
+	bool is_viet_nam_book = false;
+	out_file.open(file_name_out, ios::out);
+
+	if (out_file.is_open()) {
+		for (int i = 0; i < list_reader.size(); i++) {
+			out_file << "#" << endl;
+			out_file << list_reader.at(i)->get_id() << endl;
+			out_file << list_reader.at(i)->get_name() << endl;
+			for (int j = 0; j < list_reader.at(i)->get_list_book_borrow().size(); j++) {
+				is_viet_nam_book = list_reader.at(i)->get_list_book_borrow().at(j)->get_book_borrow()->get_type(1);
+				
+				out_file << list_reader.at(i)->get_list_book_borrow().at(j)->get_date_borrow() << endl;
+				out_file << is_viet_nam_book << endl;
+
+				if (is_viet_nam_book) {
+					VietnamBook* _dummy = (VietnamBook*)list_reader.at(i)->get_list_book_borrow().at(j);
+					out_file << _dummy->get_id() << endl;
+					out_file << _dummy->get_name() << endl;
+					out_file << _dummy->get_author() << endl;
+					out_file << _dummy->get_publisher() << endl;
+					out_file << _dummy->get_price() << endl;
+				}
+				else {
+					EnglishBook* _dummy = (EnglishBook*)list_reader.at(i)->get_list_book_borrow().at(j);
+					out_file << _dummy->get_id() << endl;
+					out_file << _dummy->get_name() << endl;
+					out_file << _dummy->get_author() << endl;
+					out_file << _dummy->get_publisher() << endl;
+					out_file << _dummy->get_price() << endl;
+					out_file << _dummy->get_ISBN() << endl;
+				}
+			}
+		}
 	}
 }
 

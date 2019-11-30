@@ -269,6 +269,11 @@ void Reader::set_name(string _name)
 	this->name = _name;
 }
 
+void Reader::set_list_book_borrow(vector<InfoBorrow*> _list)
+{
+	this->list_book_borrow = _list;
+}
+
 string Reader::get_id()
 {
 	return string(this->id);
@@ -277,6 +282,11 @@ string Reader::get_id()
 string Reader::get_name()
 {
 	return string(this->name);
+}
+
+vector<InfoBorrow*> Reader::get_list_book_borrow()
+{
+	return vector<InfoBorrow*>(list_book_borrow);
 }
 
 void Reader::print_bill_borrow()
