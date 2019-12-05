@@ -20,8 +20,8 @@ private:
 	// Nhập xuất danh sách sách mượn (thành phần của Class Reader)
 	void enter_list_book_borrow();
 
-	// Phiếu mượn sách
-	map<int, pair<int, long long>> check_true_time_and_get_pay_fine();
+	// Tính số ngày mượn sách
+	int get_day_borrow(string _date);
 
 public:
 	// Các phương thức:
@@ -43,8 +43,8 @@ public:
 	vector<InfoBorrow*> get_list_book_borrow();
 
 	// Phiếu mượn sách:
-	void print_bill_borrow();
-	void print_bill_return();
+	void print_bill_borrow(string _code); // in phiếu mượn sách
+	void print_bill_return(string _code); // In phiếu trả sách
 
 	//
 	void display_list_book_borrow();

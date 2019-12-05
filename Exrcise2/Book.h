@@ -41,8 +41,4 @@ public:
 
 	// Get type sách (là sạc VN hay Nước ngoài)
 	virtual bool get_type(int i) { return false; };
-
-	// Phương thức đọc ghi xuống file:
-	/*virtual void save(ofstream& out_file, Book* _dummy) {}
-	virtual void load(ifstream& in_file, Book* _dummy) {}*/
 };

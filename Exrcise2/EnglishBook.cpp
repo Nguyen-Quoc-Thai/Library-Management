@@ -25,7 +25,7 @@ void EnglishBook::display()
 {
 	Book::display();
 
-	cout << "ISBN: " << this->ISBN << endl;
+	cout << "+ ISBN: " << this->ISBN << endl;
 	cout << endl << endl;
 }
 

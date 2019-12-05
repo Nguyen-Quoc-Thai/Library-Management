@@ -1,0 +1,53 @@
+
+****** BILL RETURN ******
+
+**CODE: 18120554HCMUS
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+****READER: id: 18120554
+****READER: name: Nfuyen Quoc Thai
+
+-----------------------------------
+**BOOK INFORMATONS: 
+-----------------------------------
+
+****DATE BORROW: 5/12/2019
+****DATE RETURN: 5/12/2019
+----- OVERDUE: 730781 DAYS
+----> PAY FINE: -1282124592 VN?
+-----------------------------------
+*Vietnam-Book
+	+ Book id: 6127612
+	+ Book name: fjksf gkjdf sdkdfg
+	+ Book author: skkkkkkkkkkkkkkkkkkkkd sldkg skdfjhsdg 
+	+ Book publisher: skfhsdf fglkjdsf sdlkjdg
+	+ Book price: 120000
+
+****DATE BORROW: 11/11/2019
+****DATE RETURN: 5/12/2019
+----- OVERDUE: 17 DAYS
+----> PAY FINE: 340000 VN?
+-----------------------------------
+*English-Book
+	+ Book id: 7612234
+	+ Book name: kjsdfs skfj kjsdfg dlkg
+	+ Book author: gfdkjsd
+	+ Book publisher: dfkgjsdf dsflkgdfg
+	+ Book price: 200000
+	+ Book ISBN: 3123124kjdf
+
+****DATE BORROW: 10/11/2019
+****DATE RETURN: 5/12/2019
+----- OVERDUE: 18 DAYS
+----> PAY FINE: 180000 VN?
+-----------------------------------
+*Vietnam-Book
+	+ Book id: 312234234
+	+ Book name: fgkjsdf sdkljdnfgdf
+	+ Book author: kjhsdf  lfkjsdf dfg;lg
+	+ Book publisher: sdfkljhsg sdlgkdfg slgkdfg
+	+ Book price: 230000
+
+====>> TOTAL FEE PAYABLE: -1281604592

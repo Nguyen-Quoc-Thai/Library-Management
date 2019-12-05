@@ -73,18 +73,65 @@ void Library::update_menu(int i)
 
 void Library::load(string file_name_in)
 {
-	/*
+	
 	// Con trỏ file đọc đối tượng:
 	ifstream in_file;
 
-	in_file.open(file_name_in, ios::in);
+	in_file.open(file_name_in);
+
+	string is_viet_nam_book = "1";
+	string _temp = "";
 
 	if (in_file.is_open()) {
 		while (!in_file.eof())
 		{
-			
+			getline(in_file, is_viet_nam_book);
+
+			if (stoi(is_viet_nam_book)) {
+				VietnamBook* _dummy = new VietnamBook();
+
+				getline(in_file, _temp);
+				_dummy->set_id(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_name(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_author(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_publisher(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_price(stoi(_temp));
+
+				list_book.push_back(_dummy);
+			}
+			else {
+				EnglishBook* _dummy = new EnglishBook();
+				
+				getline(in_file, _temp);
+				_dummy->set_id(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_name(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_author(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_publisher(_temp);
+
+				getline(in_file, _temp);
+				_dummy->set_price(stoi(_temp));
+
+				getline(in_file, _temp);
+				_dummy->set_ISBN(_temp);
+
+				list_book.push_back(_dummy);
+			}
 		}
-	}*/
+	}
 }
 
 void Library::save(string file_name_out)

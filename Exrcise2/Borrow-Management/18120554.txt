@@ -1,0 +1,34 @@
+
+****** BILL BORROW ******
+
+**CODE: 18120554HCMUS
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+****READER: id: 18120554
+****READER: name: Nguyendfk sdflkdfg sgkjdfg
+
+-----------------------------------
+**BOOK INFORMATONS: 
+-----------------------------------
+
+****DATE: 5/12/2019
+-----------------------------------
+*Vietnam-Book
+	+ Book id: ksjdf2348
+	+ Book name: fgklsd dglks ldkhdfg
+	+ Book author: dfgdlfkgj fkjsdhglfgh
+	+ Book publisher: ikdfhks ;ldfg
+	+ Book price: 8.72349e+10
+
+****DATE: 11/11/2019
+-----------------------------------
+*English-Book
+	+ Book id: sduyjgs2367234
+	+ Book name: £idfgsa sdfjhfgs dkjfhfg
+	+ Book author: dkjghsdf kdjghlfg
+	+ Book publisher: sdfkjdf kjdfg mdfg
+	+ Book price: 123000
+	+ Book ISBN: kjsdst872364
+

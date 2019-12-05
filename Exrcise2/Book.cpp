@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<string>
+#include<time.h>
 using namespace std;
 
 void Book::input()
@@ -70,7 +71,7 @@ Book::Book(string _id, string _name, string _author, string _publisher):Book(_id
 	this->publisher = _publisher;
 }
 
-Book::Book(string _id, string _name, string _author, string _publisher, double _price):Book(_id, _name, _author, _publisher)
+Book::Book(string _id, string _name, string _author, string _publisher, double _price) : Book(_id, _name, _author, _publisher)
 {
 	this->price = _price;
 }

@@ -12,30 +12,27 @@ int main()
 {
 	/*Library lb;
 
-	Book *c = new VietnamBook();
-	Book *b = new EnglishBook();
+	lb.load("library-mana.txt");
 
-	c->input();
-	b->input();
-
-	lb.add(c);
-	lb.add(b);
-
-	lb.save("reader-mana.txt");*/
+	lb.display();*/
 
 	Reader* rd1 = new Reader();
-	Reader* rd2 = new Reader();
+	//Reader* rd2 = new Reader();
 
+	cout << "RD1" << endl;
 	rd1->input();
-	rd2->input();
+	rd1->print_bill_return(rd1->get_id());
 
-	ReaderManagement rm;
+	//cout << "RD2" << endl;
+	//rd2->input();
 
-	rm.add(rd1);
-	rm.add(rd2);
+	//ReaderManagement rm;
 
-	rm.display();
-	rm.save("reader-mana.txt");
+	//rm.add(rd1);
+	//rm.add(rd2);
+
+	//rm.display();
+	//rm.save("reader-mana.txt");
 
 	system("pause");
 	return EXIT_SUCCESS;

@@ -1,6 +1,5 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS 1
 
-
 #include "Reader.h"
 #include"VietnamBook.h"
 #include"EnglishBook.h"
@@ -85,7 +84,7 @@ void Reader::enter_list_book_borrow()
 
 					_date = to_string(local->tm_mday) + "/" + to_string(local->tm_mon + 1) + "/" + to_string(local->tm_year + 1900);
 
-					break;
+					goto a;
 
 
 				}
@@ -135,7 +134,7 @@ void Reader::enter_list_book_borrow()
 
 					_date = to_string(local->tm_mday) + "/" + to_string(local->tm_mon + 1) + "/" + to_string(local->tm_year + 1900);
 					
-					break;
+					goto b;
 
 
 				}
@@ -164,7 +163,7 @@ void Reader::enter_list_book_borrow()
 	}
 }
 
-// Hàm đổi ra số ngày từ một thời điểm đánh dấu ở quá khứ
+// Hàm đổi ra số ngày từ một thời điểm đánh dấu xác định ở quá khứ
 long long get_day_from(int year, int month, int day) {
 	if (month < 3) {
 		year--;
@@ -183,44 +182,20 @@ void Reader::display_list_book_borrow()
 	}
 }
 
-map<int, pair<int, long long>> Reader::check_true_time_and_get_pay_fine()
+int Reader::get_day_borrow(string _date)
 {
-	map<int, pair<int, long long>> map_out_of_date;
-	pair<int, pair<int, long long>> _dummy;
-
 	time_t cur_time = time(0);
 	tm* local = gmtime(&cur_time);
 
 	// dd/MM/yyyy
-
 	int day, month, year;
 	long long count;
 
-	for (int i = 0; i < list_book_borrow.size(); i++) {
-		day = stoi(list_book_borrow.at(i)->get_date_borrow().substr(0, 2));
-		month = stoi(list_book_borrow.at(i)->get_date_borrow().substr(3, 2));
-		year = stoi(list_book_borrow.at(i)->get_date_borrow().substr(6));
+		day = stoi(_date.substr(0, 2));
+		month = stoi(_date.substr(3, 2));
+		year = stoi(_date.substr(6));
 
-		count = get_day_from(local->tm_year + 1900, local->tm_mon + 1, local->tm_mday) - get_day_from(year, month, day);
-
-		if (count > 7) {
-			_dummy.first = i;
-			_dummy.second.first = count - 7;
-
-			bool is_vn_book = list_book_borrow.at(i)->get_book_borrow()->get_type(1);
-
-			if (is_vn_book) {
-				_dummy.second.second = 10000 * _dummy.second.first;
-			}
-			else {
-				_dummy.second.second = 20000 * _dummy.second.first;
-			}
-		
-			map_out_of_date.insert(_dummy);
-		}
-	}
-
-	return map_out_of_date;
+		return get_day_from(local->tm_year + 1900, local->tm_mon + 1, local->tm_mday) - get_day_from(year, month, day);
 }
 
 void Reader::input()
@@ -238,8 +213,9 @@ void Reader::input()
 
 void Reader::display()
 {
-	cout << "Reader id: " << this->id << endl;
-	cout << "Reader name: " << this->name << endl << endl;
+	cout << "__________________" << endl;
+	cout << "**READER: id: " << this->id << endl;
+	cout << "**READER: name: " << this->name << endl << endl;
 
 	display_list_book_borrow();
 }
@@ -289,35 +265,159 @@ vector<InfoBorrow*> Reader::get_list_book_borrow()
 	return vector<InfoBorrow*>(list_book_borrow);
 }
 
-void Reader::print_bill_borrow()
+void Reader::print_bill_borrow(string _code)
 {
-	system("cls");
-	cout << "\n\n***** BILL BORROW ******\n\n";
-	cout << "**READER: " << endl;
-	display();
+	ofstream out_file;
+	out_file.open("Borrow-Management/" + _code + ".txt");
+
+	if (out_file.is_open()) {
+		out_file << "\n****** BILL BORROW ******\n\n";
+		out_file << "**CODE: " << _code << "HCMUS" << endl << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "**READER INFORMATONS: " << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "****READER: id: " << this->id << endl;
+		out_file << "****READER: name: " << this->name << endl << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "**BOOK INFORMATONS: " << endl;
+		out_file << "-----------------------------------" << endl << endl;
+
+		for (int i = 0; i < list_book_borrow.size(); i++) {
+			out_file << "****DATE: " << list_book_borrow.at(i)->get_date_borrow() << endl;
+			out_file << "-----------------------------------" << endl;
+			if (list_book_borrow.at(i)->get_book_borrow()->get_type(1)) {
+				out_file << "*Vietnam-Book" << endl;
+			}
+			else {
+				out_file << "*English-Book" << endl;
+			}
+
+			if (list_book_borrow.at(i)->get_book_borrow()->get_type(1)) {
+				VietnamBook* _dummy = (VietnamBook*)list_book_borrow.at(i)->get_book_borrow();
+				out_file << "\t+ Book id: " << _dummy->get_id() << endl;
+				out_file << "\t+ Book name: " << _dummy->get_name() << endl;
+				out_file << "\t+ Book author: " << _dummy->get_author() << endl;
+				out_file << "\t+ Book publisher: " << _dummy->get_publisher() << endl;
+				out_file << "\t+ Book price: " << _dummy->get_price() << endl << endl;
+			}
+			else {
+				EnglishBook* _dummy = (EnglishBook*)list_book_borrow.at(i)->get_book_borrow();
+				out_file << "\t+ Book id: " << _dummy->get_id() << endl;
+				out_file << "\t+ Book name: " << _dummy->get_name() << endl;
+				out_file << "\t+ Book author: " << _dummy->get_author() << endl;
+				out_file << "\t+ Book publisher: " << _dummy->get_publisher() << endl;
+				out_file << "\t+ Book price: " << _dummy->get_price() << endl;
+				out_file << "\t+ Book ISBN: " << _dummy->get_ISBN() << endl << endl;
+			}
+		}
+	}
+	else {
+		cout << "Fail to create bill borrow\n";
+		return;
+	}
 }
 
-void Reader::print_bill_return()
+void Reader::print_bill_return(string _code)
 {
-	cout << "\n\n***** BILL RETURN *****\n\n";
-	cout << "**READER:" << endl;
-	display();
+	ofstream out_file;
+	out_file.open("Return-Management/" + _code + ".txt");
 
-	map<int, pair<int, long long>> map_out_of_date = check_true_time_and_get_pay_fine();
+	time_t cur_time = time(0);
+	tm* local = gmtime(&cur_time);
 
-	if (map_out_of_date.size()) {
-		cout << "\n**YOU BORROWED OVERDUE BOOKS !\n\n";
+	long long sum_pay_fine = 0.0; // Tổng tiền phải trả nếu sách quá hạn quá 
+	bool is_viet_nam_book = true;
 
-		map<int, pair<int, long long>>::iterator it;
-		long long sum_pay_fine = 0.0;
+	if (out_file.is_open()) {
+		out_file << "\n****** BILL RETURN ******\n\n";
+		out_file << "**CODE: " << _code << "HCMUS" << endl << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "**READER INFORMATONS: " << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "****READER: id: " << this->id << endl;
+		out_file << "****READER: name: " << this->name << endl << endl;
+		out_file << "-----------------------------------" << endl;
+		out_file << "**BOOK INFORMATONS: " << endl;
+		out_file << "-----------------------------------" << endl << endl;
 
-		for (it = map_out_of_date.begin(); it != map_out_of_date.end(); it++) {
-			list_book_borrow.at(it->first)->get_book_borrow()->display();
-			cout << "\n**OUT OF DATE: " << it->second.first << " DAYS !\n";
-			sum_pay_fine += it->second.second;
+		for (int i = 0; i < list_book_borrow.size(); i++) {
+
+			is_viet_nam_book = list_book_borrow.at(i)->get_book_borrow()->get_type(1);
+
+			string _date = list_book_borrow.at(i)->get_date_borrow();
+			int _count = get_day_borrow(_date);
+
+			
+
+			if (is_viet_nam_book) {
+				out_file << "*Vietnam-Book" << endl;
+			}
+			else {
+				out_file << "*English-Book" << endl;
+			}
+
+			if (is_viet_nam_book) {
+				VietnamBook* _dummy = (VietnamBook*)list_book_borrow.at(i)->get_book_borrow();
+
+				out_file << "\t+ Book id: " << _dummy->get_id() << endl;
+				out_file << "\t+ Book name: " << _dummy->get_name() << endl;
+				out_file << "\t+ Book author: " << _dummy->get_author() << endl;
+				out_file << "\t+ Book publisher: " << _dummy->get_publisher() << endl;
+				out_file << "\t+ Book price: " << _dummy->get_price() << endl << endl;
+
+				out_file << "****DATE BORROW: " << list_book_borrow.at(i)->get_date_borrow() << endl;
+				out_file << "****DATE RETURN: " << to_string(local->tm_mday) + "/" + to_string(local->tm_mon + 1) + "/" + to_string(local->tm_year + 1900) << endl;
+
+				if (_count > 7) {
+					out_file << "----- OVERDUE: " << _count - 7 << " DAYS" << endl;
+
+					if (is_viet_nam_book) {
+						out_file << "----> PAY FINE: " << (_count - 7) * 10000 << " VNĐ" << endl;
+						sum_pay_fine += (_count - 7) * 10000;
+					}
+					else {
+						out_file << "----> PAY FINE: " << (_count - 7) * 20000 << " VNĐ" << endl;
+						sum_pay_fine += (_count - 7) * 20000;
+					}
+				}
+
+				out_file << "-----------------------------------" << endl << endl << endl;
+			}
+			else {
+				EnglishBook* _dummy = (EnglishBook*)list_book_borrow.at(i)->get_book_borrow();
+
+				out_file << "\t+ Book id: " << _dummy->get_id() << endl;
+				out_file << "\t+ Book name: " << _dummy->get_name() << endl;
+				out_file << "\t+ Book author: " << _dummy->get_author() << endl;
+				out_file << "\t+ Book publisher: " << _dummy->get_publisher() << endl;
+				out_file << "\t+ Book price: " << _dummy->get_price() << endl;
+				out_file << "\t+ Book ISBN: " << _dummy->get_ISBN() << endl << endl;
+
+				out_file << "****DATE BORROW: " << list_book_borrow.at(i)->get_date_borrow() << endl;
+				out_file << "****DATE RETURN: " << to_string(local->tm_mday) + "/" + to_string(local->tm_mon + 1) + "/" + to_string(local->tm_year + 1900) << endl;
+
+				if (_count > 7) {
+					out_file << "----- OVERDUE: " << _count - 7 << " DAYS" << endl;
+
+					if (is_viet_nam_book) {
+						out_file << "----> PAY FINE: " << (_count - 7) * 10000 << " VND" << endl;
+						sum_pay_fine += (_count - 7) * 10000;
+					}
+					else {
+						out_file << "----> PAY FINE: " << (_count - 7) * 20000 << " VND" << endl;
+						sum_pay_fine += (_count - 7) * 20000;
+					}
+				}
+
+				out_file << "-----------------------------------" << endl << endl << endl;
+			}
 		}
 
-		cout << "\n**TOTAL PAY FINE: " << sum_pay_fine << endl << endl;
+		out_file << "====>> TOTAL FEE PAYABLE: " << sum_pay_fine;
+	}
+	else {
+		cout << "Fail to create bill borrow\n";
+		return;
 	}
 }
 
