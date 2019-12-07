@@ -14,16 +14,20 @@ void Library::update_menu(int i)
 	system("cls");
 
 	while (1) {
-		cout<< "*1: Change ID \n"
-			<< "*2: Change Name \n"
-			<< "*3: Change Author \n"
-			<< "*4: Change Publisher \n"
-			<< "*5: Change Price \n"
-			<< "*0: No change ! \n"
-			<< "+ Choose ?  \n"
+		cout << "\n UPDATE BOOK \n";
+		cout<< "\n+ 1: Change ID \n"
+			<< "+ 2: Change Name \n"
+			<< "+ 3: Change Author \n"
+			<< "+ 4: Change Publisher \n"
+			<< "+ 5: Change Price \n"
+			<< "+ 0: No change ! \n"
+			<< "+ Choose ?  \n\n"
 			<< ">> ";
 
 		cin >> choose;
+		cin.ignore();
+
+		cout << endl;
 
 		switch (choose)
 		{
@@ -31,35 +35,35 @@ void Library::update_menu(int i)
 				return;
 			}
 			case 1: {
-				cout << "+ New ID: ";
+				cout << ">> New ID: ";
 				getline(cin, _dummy);
 				cin.ignore(0);
 				list_book.at(i)->set_id(_dummy);
 				break;
 			}
 			case 2: {
-				cout << "+ New Name: ";
+				cout << ">> New Name: ";
 				getline(cin, _dummy);
 				cin.ignore(0);
 				list_book.at(i)->set_name(_dummy);
 				break;
 			}
 			case 3: {
-				cout << "+ New Author: ";
+				cout << ">> New Author: ";
 				getline(cin, _dummy);
 				cin.ignore(0);
 				list_book.at(i)->set_author(_dummy);
 				break;
 			}
 			case 4: {
-				cout << "+ New Publisher: ";
+				cout << ">> New Publisher: ";
 				getline(cin, _dummy);
 				cin.ignore(0);
 				list_book.at(i)->set_publisher(_dummy);
 				break;
 			}
 			case 5: {
-				cout << "+ New Price: ";
+				cout << ">> New Price: ";
 				int _temp = 0;
 				cin >> _temp;
 				list_book.at(i)->set_price(_temp);

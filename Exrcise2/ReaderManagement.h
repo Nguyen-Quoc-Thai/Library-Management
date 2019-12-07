@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿#define _CRT_SECURE_NO_WARNINGS 1
+
+#pragma once
 
 #include"Reader.h"
 
@@ -19,6 +21,7 @@ private:
 	vector<int > find_by_name(string _name);
 
 public:
+
 	//Phương thức khởi tạo
 	ReaderManagement();
 
@@ -41,7 +44,17 @@ public:
 	void del_by_reader_name(string _name);
 
 	// Phương thức load và save đối tượng:
-	void load(string file_name_in);
-	void save(string file_name_out);
+	void load(string file_name_in = "Reader-Mana.txt");
+	void save(string file_name_out = "Reader-Mana.txt");
+
+	// In phiếu mượn sách, trả sách
+	void print_bill_borrow(string _reader_id);
+	void print_bill_return(string _reader_id);
+
+	void print_all_bill_borrow(string _folder_name = "All-Borrow-Management");
+	void print_all_bill_return(string _folder_name = "All-Return-Management");
+
+	// Liệt kê danh sách các đọc giả mượn sách quá hạn và số tiền phải trả:
+	void list_reader_overdue(string _file_name = "List-Reader-Overdue");
 };
 

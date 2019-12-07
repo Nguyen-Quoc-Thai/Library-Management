@@ -1,0 +1,47 @@
+
+****** BILL RETURN ******
+
+**CODE: 18120552HCMUS
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+
+****READER: id: 18120552
+****READER: name: Vo Minh Tan
+
+-----------------------------------
+**BOOK INFORMATONS: 
+-----------------------------------
+
+*Vietnam-Book
+	+ Book id: 123
+	+ Book name: dfgkjdf gdfkj
+	+ Book author: dgkjdf gdkfjdg dlkjdfg
+	+ Book publisher: sgkjdf gskjhdfg
+	+ Book price: 120000
+
+****DATE BORROW: 07/12/2019
+****DATE RETURN: 07/12/2019
+
+----- DONT OVERDUE
+----> NO PAY FINE !
+-----------------------------------
+
+
+*English-Book
+	+ Book id: 135
+	+ Book name: dfskjdfgjkdfg
+	+ Book author: skgkjsdgdflgk
+	+ Book publisher: sadfuksdfuisdfg
+	+ Book price: 120000
+	+ Book ISBN: jshfgjg24
+
+****DATE BORROW: 11/11/2019
+****DATE RETURN: 07/12/2019
+
+----- OVERDUE: 19 DAYS
+----> PAY FINE: 380000 VND
+-----------------------------------
+
+====>> TOTAL FEE PAYABLE: 380000

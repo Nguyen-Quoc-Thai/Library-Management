@@ -1,17 +1,27 @@
 
 ****** BILL BORROW ******
 
-**CODE: 18120554HCMUS
+**CODE: 18120552HCMUS
 
 -----------------------------------
 **READER INFORMATONS: 
 -----------------------------------
 
-****READER: id: 18120554
-****READER: name: Nguyen Quoc Thai
+****READER: id: 18120552
+****READER: name: Vo Minh Tan
 
 -----------------------------------
 **BOOK INFORMATONS: 
+-----------------------------------
+
+*Vietnam-Book
+	+ Book id: 123
+	+ Book name: dfgkjdf gdfkj
+	+ Book author: dgkjdf gdkfjdg dlkjdfg
+	+ Book publisher: sgkjdf gskjhdfg
+	+ Book price: 120000
+
+****DATE: 07/12/2019
 -----------------------------------
 
 *English-Book
@@ -22,17 +32,6 @@
 	+ Book price: 120000
 	+ Book ISBN: jshfgjg24
 
-****DATE: 07/12/2019
------------------------------------
-
-*English-Book
-	+ Book id: 256
-	+ Book name: dfgmjdfg bsdlkndf
-	+ Book author: slkjdjfs skgjdf
-	+ Book publisher: sdlkfsd flkdsg
-	+ Book price: 350000
-	+ Book ISBN: sdfjkh123
-
-****DATE: 07/12/2019
+****DATE: 11/11/2019
 -----------------------------------
 

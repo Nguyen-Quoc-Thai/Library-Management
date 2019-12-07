@@ -23,6 +23,9 @@ private:
 	// Tính số ngày mượn sách
 	int get_day_borrow(string _date);
 
+	// Get local date:
+	string get_local_date();
+
 public:
 	// Các phương thức:
 	void input();
@@ -43,10 +46,13 @@ public:
 	vector<InfoBorrow*> get_list_book_borrow();
 
 	// Phiếu mượn sách:
-	void print_bill_borrow(string _code); // in phiếu mượn sách
-	void print_bill_return(string _code); // In phiếu trả sách
+	void print_bill_borrow(string _code, string folder_name = "Borrow-Management"); // in phiếu mượn sách
+	void print_bill_return(string _code, string folder_name = "Return-Management"); // In phiếu trả sách
 
 	//
 	void display_list_book_borrow();
+
+	// Tính tổng tiền quá hạn phải trả:
+	long long total_pay_fine();
 };
 

@@ -4,6 +4,7 @@
 
 #include<fstream>
 #include<string>
+#include<time.h>
 #include<iostream>
 using namespace std;
 
@@ -156,6 +157,80 @@ void ReaderManagement::save(string file_name_out)
 					out_file << _dummy->get_ISBN() << endl;
 				}
 			}
+		}
+	}
+}
+
+void ReaderManagement::print_bill_borrow(string _reader_id)
+{
+	vector <int > result =  find_by_id(_reader_id);
+
+	if (!result.size()) {
+		cout << "----> NOT FOUND READER ID !" << endl << endl;
+		return;
+	}
+	else {
+		for (int i = 0; i < result.size(); i++) {
+			list_reader.at(result.at(i))->print_bill_borrow(list_reader.at(result.at(i))->get_id());
+		}
+		cout << "----> DONE !" << endl << endl;
+	}
+}
+
+void ReaderManagement::print_bill_return(string _reader_id)
+{
+	vector <int > result = find_by_id(_reader_id);
+
+	if (!result.size()) {
+		cout << "----> NOT FOUND READER ID !" << endl << endl;
+		return;
+	}
+	else {
+		for (int i = 0; i < result.size(); i++) {
+			list_reader.at(result.at(i))->print_bill_return(list_reader.at(result.at(i))->get_id());
+		}
+		cout << "----> DONE !" << endl << endl;
+	}
+}
+
+void ReaderManagement::print_all_bill_borrow(string _folder_name)
+{
+	for (int i = 0; i < list_reader.size(); i++) {
+		list_reader.at(i)->print_bill_borrow(list_reader.at(i)->get_id(), _folder_name);
+	}
+	cout << "\n----> DONE !" << endl << endl;
+}
+
+void ReaderManagement::print_all_bill_return(string _folder_name)
+{
+	for (int i = 0; i < list_reader.size(); i++) {
+		list_reader.at(i)->print_bill_return(list_reader.at(i)->get_id(), _folder_name);
+	}
+	cout << "\n----> DONE !" << endl << endl;
+}
+
+void ReaderManagement::list_reader_overdue(string _file_name)
+{
+	ofstream out_file;
+	out_file.open(_file_name);
+
+	time_t cur_time = time(0);
+	tm* local = gmtime(&cur_time);
+
+	out_file << "\n******** LIST READER OVERDUE ***********\n\n";
+	cout << "\n******** LIST READER OVERDUE ***********\n\n";
+
+	for (int i = 0; i < list_reader.size(); i++) {
+		if ((int)list_reader.at(i)->total_pay_fine() > 0) {
+			out_file << "-----------------------------------" << endl;
+			out_file << "**READER INFORMATONS: " << endl;
+			out_file << "-----------------------------------" << endl << endl;
+			out_file << "****READER: id: " << list_reader.at(i)->get_id() << endl;
+			out_file << "****READER: name: " << list_reader.at(i)->get_name() << endl << endl;
+			out_file << "-----------------------------------" << endl;
+			out_file << "------> TOTAL PAYFINE: " << list_reader.at(i)->total_pay_fine() << endl << endl;
+
+			list_reader.at(i)->display();
 		}
 	}
 }

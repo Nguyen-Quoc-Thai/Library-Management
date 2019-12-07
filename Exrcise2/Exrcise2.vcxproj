@@ -129,6 +129,7 @@
     <ClCompile Include="EnglishBook.cpp" />
     <ClCompile Include="InfoBorrow.cpp" />
     <ClCompile Include="Library.cpp" />
+    <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="Reader.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -146,6 +147,7 @@
     <ClInclude Include="EnglishBook.h" />
     <ClInclude Include="InfoBorrow.h" />
     <ClInclude Include="Library.h" />
+    <ClInclude Include="Manager.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Reader.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

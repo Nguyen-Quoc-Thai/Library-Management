@@ -10,10 +10,9 @@ using std::vector;
 
 class Library
 {
-private:
 	// Mảng vector chứa tất cả các sách có trong thư viện
-	vector<Book*> list_book;
-
+	static vector<Book*> list_book;
+private:
 	// Menu phương thức update đối tượng
 	void update_menu(int i);
 
@@ -30,6 +29,11 @@ public:
 
 	// Phương thức xuất toàn bộ sách trong thư viện
 	void display();
+
+	// getter setter
+	static vector<Book*> get_list_book() {return list_book; }
+
+	static void set_list_book(vector<Book*> _list_book) {list_book = _list_book; }
 
 	// Phương thức xóa 1 quyển sách:
 	void del_by_book_id(string _id);
@@ -53,8 +57,8 @@ public:
 	void update_by_book_price(double _price);
 
 	// Phương thức load và save đối tượng:
-	void load(string file_name_in);
-	void save(string file_name_out);
+	void load(string file_name_in = "Library-Mana.txt");
+	void save(string file_name_out = "Library-Mana.txt");
 
 };
 
