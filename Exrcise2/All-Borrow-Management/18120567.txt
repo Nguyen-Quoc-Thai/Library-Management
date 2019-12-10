@@ -1,0 +1,27 @@
+
+****** BILL BORROW ******
+
+**CODE: 18120567HCMUS
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+
+****READER: id: 18120567
+****READER: name: Pham Xuan Thanh
+
+-----------------------------------
+**BOOK INFORMATONS: 
+-----------------------------------
+
+*English-Book
+	+ Book id: 234
+	+ Book name: Anthropology
+	+ Book author: Bill Gates
+	+ Book publisher: Dzanc Books (Detroit, MI)
+	+ Book price: 123000
+	+ Book ISBN: 9873213456
+
+****DATE: 10/12/2019
+-----------------------------------
+

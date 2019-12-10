@@ -1,28 +1,17 @@
 
 ****** BILL BORROW ******
 
-**CODE: 18120552HCMUS
+**CODE: 18120556HCMUS
 
 -----------------------------------
 **READER INFORMATONS: 
 -----------------------------------
 
-****READER: id: 18120552
-****READER: name: Vo Minh tan
+****READER: id: 18120556
+****READER: name: Hong Minh Thang
 
 -----------------------------------
 **BOOK INFORMATONS: 
------------------------------------
-
-*English-Book
-	+ Book id: 135
-	+ Book name: Communication & Media Studies
-	+ Book author: Mark Zuckerberg
-	+ Book publisher: Hanging Loose Press (Brooklyn, NY)
-	+ Book price: 250000
-	+ Book ISBN: 9875643277
-
-****DATE: 08/11/2019
 -----------------------------------
 
 *Vietnam-Book
@@ -32,6 +21,17 @@
 	+ Book publisher: Akashic Books (Brooklyn, NY)
 	+ Book price: 120000
 
-****DATE: 11/11/2019
+****DATE: 10/10/2019
+-----------------------------------
+
+*English-Book
+	+ Book id: 567
+	+ Book name: Development Studies
+	+ Book author: Larry Page
+	+ Book publisher: McSweeneys (San Francisco, CA)
+	+ Book price: 130000
+	+ Book ISBN: 98763832133
+
+****DATE: 10/12/2019
 -----------------------------------
 

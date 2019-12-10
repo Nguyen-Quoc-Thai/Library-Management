@@ -7,6 +7,9 @@ void Controller::onload()
 {
 	Manager _mn;
 
+	_mn.get_lb().load();
+	_mn.get_rm().load();
+
 	Library _lb = _mn.get_lb();
 	ReaderManagement _rm = _mn.get_rm();
 
@@ -22,6 +25,7 @@ void Controller::onload()
 		{
 		case 0: {
 			_mn.get_lb().save();
+			_mn.get_rm().save();
 			return;
 		}
 		case 10: {

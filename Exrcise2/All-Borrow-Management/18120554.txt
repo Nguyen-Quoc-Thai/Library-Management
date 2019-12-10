@@ -16,23 +16,23 @@
 
 *English-Book
 	+ Book id: 135
-	+ Book name: dfskjdfgjkdfg
-	+ Book author: skgkjsdgdflgk
-	+ Book publisher: sadfuksdfuisdfg
-	+ Book price: 120000
-	+ Book ISBN: jshfgjg24
+	+ Book name: Communication & Media Studies
+	+ Book author: Mark Zuckerberg
+	+ Book publisher: Hanging Loose Press (Brooklyn, NY)
+	+ Book price: 250000
+	+ Book ISBN: 9875643277
 
-****DATE: 07/12/2019
+****DATE: 10/12/2019
 -----------------------------------
 
 *English-Book
-	+ Book id: 256
-	+ Book name: dfgmjdfg bsdlkndf
-	+ Book author: slkjdjfs skgjdf
-	+ Book publisher: sdlkfsd flkdsg
-	+ Book price: 350000
-	+ Book ISBN: sdfjkh123
+	+ Book id: 567
+	+ Book name: Development Studies
+	+ Book author: Larry Page
+	+ Book publisher: McSweeneys (San Francisco, CA)
+	+ Book price: 130000
+	+ Book ISBN: 98763832133
 
-****DATE: 07/12/2019
+****DATE: 11/11/2019
 -----------------------------------
 

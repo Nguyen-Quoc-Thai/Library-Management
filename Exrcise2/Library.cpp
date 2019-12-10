@@ -14,7 +14,9 @@ void Library::update_menu(int i)
 	system("cls");
 
 	while (1) {
-		cout << "\n UPDATE BOOK \n";
+		system("cls");
+
+		cout << "\n **UPDATE BOOK \n";
 		cout<< "\n+ 1: Change ID \n"
 			<< "+ 2: Change Name \n"
 			<< "+ 3: Change Author \n"
@@ -91,48 +93,50 @@ void Library::load(string file_name_in)
 		{
 			getline(in_file, is_viet_nam_book);
 
-			if (stoi(is_viet_nam_book)) {
-				VietnamBook* _dummy = new VietnamBook();
+			if (is_viet_nam_book.size()) {
+				if (stoi(is_viet_nam_book)) {
+					VietnamBook* _dummy = new VietnamBook();
 
-				getline(in_file, _temp);
-				_dummy->set_id(_temp);
+					getline(in_file, _temp);
+					_dummy->set_id(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_name(_temp);
+					getline(in_file, _temp);
+					_dummy->set_name(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_author(_temp);
+					getline(in_file, _temp);
+					_dummy->set_author(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_publisher(_temp);
+					getline(in_file, _temp);
+					_dummy->set_publisher(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_price(stoi(_temp));
+					getline(in_file, _temp);
+					_dummy->set_price(stoi(_temp));
 
-				list_book.push_back(_dummy);
-			}
-			else {
-				EnglishBook* _dummy = new EnglishBook();
-				
-				getline(in_file, _temp);
-				_dummy->set_id(_temp);
+					list_book.push_back(_dummy);
+				}
+				else {
+					EnglishBook* _dummy = new EnglishBook();
 
-				getline(in_file, _temp);
-				_dummy->set_name(_temp);
+					getline(in_file, _temp);
+					_dummy->set_id(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_author(_temp);
+					getline(in_file, _temp);
+					_dummy->set_name(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_publisher(_temp);
+					getline(in_file, _temp);
+					_dummy->set_author(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_price(stoi(_temp));
+					getline(in_file, _temp);
+					_dummy->set_publisher(_temp);
 
-				getline(in_file, _temp);
-				_dummy->set_ISBN(_temp);
+					getline(in_file, _temp);
+					_dummy->set_price(stoi(_temp));
 
-				list_book.push_back(_dummy);
+					getline(in_file, _temp);
+					_dummy->set_ISBN(_temp);
+
+					list_book.push_back(_dummy);
+				}
 			}
 		}
 	}
@@ -254,7 +258,7 @@ void Library::find_by_book_id(string _id)
 		return;
 	}
 
-	cout << "**TOTAL FOUND " << _dummy.size() << " RESULTS !\n";
+	cout << "\n**TOTAL FOUND " << _dummy.size() << " RESULTS !\n\n";
 
 	for (int i = 0; i < _dummy.size(); i++) {
 		cout << "*BOOK: " << i + 1 << endl;

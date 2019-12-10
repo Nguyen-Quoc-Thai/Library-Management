@@ -1,6 +1,7 @@
 ﻿#include "ReaderManagement.h"
 #include"EnglishBook.h"
 #include"VietnamBook.h"
+#include"Library.h"
 
 #include<fstream>
 #include<string>
@@ -50,7 +51,7 @@ void ReaderManagement::update_by_reader_id(string _id)
 	vector<int> _dummy = find_by_id(_id);
 
 	if (_dummy.size() == 0) {
-		cout << "NOT FOUND !\n";
+		cout << "\n*NOT FOUND !\n\n";
 		return;
 	}
 
@@ -64,10 +65,10 @@ void ReaderManagement::update_by_reader_id(string _id)
 
 void ReaderManagement::update_by_reader_name(string _name)
 {
-	vector<int> _dummy = find_by_id(_name);
+	vector<int> _dummy = find_by_name(_name);
 
 	if (_dummy.size() == 0) {
-		cout << "NOT FOUND !\n";
+		cout << "\n*NOT FOUND !\n\n";
 		return;
 	}
 
@@ -101,7 +102,61 @@ void ReaderManagement::del_by_reader_name(string _name)
 
 void ReaderManagement::load(string file_name_in)
 {
+	// Con trỏ file đọc đối tượng:
+	ifstream in_file;
 
+	in_file.open(file_name_in);
+
+	string reader_id = "";
+	string reader_name = "";
+	string num_book_borrow = "";
+	string date = "";
+
+	string book_id = "";
+
+	
+
+	int count = 0;
+
+	if (in_file.is_open()) {
+		while (!in_file.eof())
+		{
+			Reader* dummy = new Reader();
+			vector<InfoBorrow*> list_book;
+
+			getline(in_file, reader_id);
+
+			if (!reader_id.size()) {
+				return;
+			}
+
+			getline(in_file, reader_name);
+			getline(in_file, num_book_borrow);
+
+			for (int i = 0; i < stoi(num_book_borrow); i++) {
+				InfoBorrow* temp = new InfoBorrow();
+
+				getline(in_file, date);
+				getline(in_file, book_id);
+
+				for (int j = 0; j < Library::get_list_book().size(); j++) {
+					if (Library::get_list_book().at(j)->get_id()._Equal(book_id)) {
+						temp->set_book_borrow(Library::get_list_book().at(j));
+						temp->set_date_borrow(date);
+
+						list_book.push_back(temp);
+
+						break;
+					}
+				}
+			}
+
+			dummy->set_id(reader_id);
+			dummy->set_name(reader_name);
+			dummy->set_list_book_borrow(list_book);
+			list_reader.push_back(dummy);
+		}
+	}
 }
 
 
@@ -109,12 +164,12 @@ void ReaderManagement::load(string file_name_in)
 
 * Bắt đầu ghi reader ID
 * Tiếp theo ghi reader Name
+* Tiếp theo ghi số lượng sách mà đọc giả đó mượn
 
 while()
 
-* Ghi reader Date
-* Ghi 1 or 0 thể hiện sách là Việt Nam hay English
-* Ghi các thuộc tính tương ứng với từng loại sách
+* Ghi reader Date borrow
+* Ghi xuống book id
 
 */
 void ReaderManagement::save(string file_name_out)
@@ -131,31 +186,8 @@ void ReaderManagement::save(string file_name_out)
 			out_file << list_reader.at(i)->get_list_book_borrow().size() << endl; // ghi xuống số lượng sách mà Reader thứ i mượn
 
 			for (int j = 0; j < list_reader.at(i)->get_list_book_borrow().size(); j++) {
-
-				is_viet_nam_book = list_reader.at(i)->get_list_book_borrow().at(j)->get_book_borrow()->get_type(1); // Hỏi đối tượng xem nó có phải sách Việt Nam hay không
-				
 				out_file << list_reader.at(i)->get_list_book_borrow().at(j)->get_date_borrow() << endl; // Ghi xuống ngày mượn
-				out_file << is_viet_nam_book << endl; // Ghi xuống dấu: đây là sách gì (1: VN, 0: Eng)
-
-				if (is_viet_nam_book) { // Nếu nó là sách Việt Nam thì
-
-					VietnamBook* _dummy = (VietnamBook*)(list_reader.at(i)->get_list_book_borrow().at(j)->get_book_borrow());
-					out_file << _dummy->get_id() << endl;
-					out_file << _dummy->get_name() << endl;
-					out_file << _dummy->get_author() << endl;
-					out_file << _dummy->get_publisher() << endl;
-					out_file << _dummy->get_price() << endl;
-				}
-				else { // Là sách Eng thì
-
-					EnglishBook* _dummy = (EnglishBook*)(list_reader.at(i)->get_list_book_borrow().at(j)->get_book_borrow());
-					out_file << _dummy->get_id() << endl;
-					out_file << _dummy->get_name() << endl;
-					out_file << _dummy->get_author() << endl;
-					out_file << _dummy->get_publisher() << endl;
-					out_file << _dummy->get_price() << endl;
-					out_file << _dummy->get_ISBN() << endl;
-				}
+				out_file << list_reader.at(i)->get_list_book_borrow().at(j)->get_book_borrow()->get_id() << endl; // Ghi xuống ID
 			}
 		}
 	}
@@ -214,6 +246,10 @@ void ReaderManagement::list_reader_overdue(string _file_name)
 	ofstream out_file;
 	out_file.open(_file_name);
 
+	if (!out_file.is_open()) {
+		return;
+	}
+
 	time_t cur_time = time(0);
 	tm* local = gmtime(&cur_time);
 
@@ -230,7 +266,13 @@ void ReaderManagement::list_reader_overdue(string _file_name)
 			out_file << "-----------------------------------" << endl;
 			out_file << "------> TOTAL PAYFINE: " << list_reader.at(i)->total_pay_fine() << endl << endl;
 
-			list_reader.at(i)->display();
+			cout << "-----------------------------------" << endl;
+			cout << "**READER INFORMATONS: " << endl;
+			cout << "-----------------------------------" << endl << endl;
+			cout << "****READER: id: " << list_reader.at(i)->get_id() << endl;
+			cout << "****READER: name: " << list_reader.at(i)->get_name() << endl << endl;
+			cout << "-----------------------------------" << endl;
+			cout << "------> TOTAL PAYFINE: " << list_reader.at(i)->total_pay_fine() << endl << endl;
 		}
 	}
 }
@@ -243,13 +285,17 @@ void ReaderManagement::update_menu(int i)
 	system("cls");
 
 	while (1) {
+		system("cls");
+
+		cout << "\n**UPDATE READER\n\n";
 		cout<< "*1: Change ID \n"
 			<< "*2: Change Name \n"
-			<< "*0: No change ! \n"
-			<< "+ Choose ?  \n"
+			<< "*0: No change ! \n\n"
+			<< "+ You choose ?  \n\n"
 			<< ">> ";
 
 		cin >> choose;
+		cin.ignore();
 
 		switch (choose)
 		{

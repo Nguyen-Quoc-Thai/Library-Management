@@ -9,9 +9,11 @@ using namespace std;
 
 class ReaderManagement
 {
+	// Mảng tĩnh chứa các đọc giả
+	static vector<Reader*> list_reader;
+
 private:
-	// Mảng chứa các đọc giả
-	vector<Reader*> list_reader;
+	
 
 	// Phương thức display menu update:
 	void update_menu(int i);
@@ -55,6 +57,6 @@ public:
 	void print_all_bill_return(string _folder_name = "All-Return-Management");
 
 	// Liệt kê danh sách các đọc giả mượn sách quá hạn và số tiền phải trả:
-	void list_reader_overdue(string _file_name = "List-Reader-Overdue");
+	void list_reader_overdue(string _file_name = "List-Reader-Overdue/List-Over.txt");
 };
 

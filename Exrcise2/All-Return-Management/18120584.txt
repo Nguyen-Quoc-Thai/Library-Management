@@ -1,33 +1,33 @@
 
 ****** BILL RETURN ******
 
-**CODE: 18120552HCMUS
+**CODE: 18120584HCMUS
 
 -----------------------------------
 **READER INFORMATONS: 
 -----------------------------------
 
-****READER: id: 18120552
-****READER: name: Vo Minh tan
+****READER: id: 18120584
+****READER: name: Pham Dinh Thuc
 
 -----------------------------------
 **BOOK INFORMATONS: 
 -----------------------------------
 
-*English-Book
-	+ Book id: 135
-	+ Book name: Communication & Media Studies
-	+ Book author: Mark Zuckerberg
-	+ Book publisher: Hanging Loose Press (Brooklyn, NY)
-	+ Book price: 250000
-	+ Book ISBN: 9875643277
+*Vietnam-Book
+	+ Book id: 345
+	+ Book name: Business & Management Studies
+	+ Book author: Warren Buffett
+	+ Book publisher: Graywolf Press (Minneapolis, MN)
+	+ Book price: 230000
 
-****DATE BORROW: 08/11/2019
+****DATE BORROW: 10/12/2019
 ****DATE RETURN: 10/12/2019
 
------ OVERDUE: 25 DAYS
-----> PAY FINE: 500000 VND
+----- DONT OVERDUE
+----> NO PAY FINE !
 -----------------------------------
+
 
 *Vietnam-Book
 	+ Book id: 123
@@ -36,12 +36,12 @@
 	+ Book publisher: Akashic Books (Brooklyn, NY)
 	+ Book price: 120000
 
-****DATE BORROW: 11/11/2019
+****DATE BORROW: 06/12/2019
 ****DATE RETURN: 10/12/2019
 
------ OVERDUE: 22 DAYS
-----> PAY FINE: 220000 VND
+----- DONT OVERDUE
+----> NO PAY FINE !
 -----------------------------------
 
 
-====>> TOTAL FEE PAYABLE: 720000
+====>> TOTAL FEE PAYABLE: 0

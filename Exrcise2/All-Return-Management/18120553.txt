@@ -1,0 +1,32 @@
+
+****** BILL RETURN ******
+
+**CODE: 18120553HCMUS
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+
+****READER: id: 18120553
+****READER: name: Nguyen Le Ngoc Tan
+
+-----------------------------------
+**BOOK INFORMATONS: 
+-----------------------------------
+
+*Vietnam-Book
+	+ Book id: 654
+	+ Book name: Anthropology
+	+ Book author: Mark Zuckerberg
+	+ Book publisher: Akashic Books (Brooklyn, NY)
+	+ Book price: 123000
+
+****DATE BORROW: 10/10/2019
+****DATE RETURN: 10/12/2019
+
+----- OVERDUE: 54 DAYS
+----> PAY FINE: 540000 VND
+-----------------------------------
+
+
+====>> TOTAL FEE PAYABLE: 540000

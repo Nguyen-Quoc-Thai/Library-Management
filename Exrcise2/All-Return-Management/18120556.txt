@@ -1,33 +1,33 @@
 
 ****** BILL RETURN ******
 
-**CODE: 18120554HCMUS
+**CODE: 18120556HCMUS
 
 -----------------------------------
 **READER INFORMATONS: 
 -----------------------------------
 
-****READER: id: 18120554
-****READER: name: Nguyen Quoc Thai
+****READER: id: 18120556
+****READER: name: Hong Minh Thang
 
 -----------------------------------
 **BOOK INFORMATONS: 
 -----------------------------------
 
-*English-Book
-	+ Book id: 135
-	+ Book name: Communication & Media Studies
-	+ Book author: Mark Zuckerberg
-	+ Book publisher: Hanging Loose Press (Brooklyn, NY)
-	+ Book price: 250000
-	+ Book ISBN: 9875643277
+*Vietnam-Book
+	+ Book id: 123
+	+ Book name: Accounting & Finance
+	+ Book author: Jeff Bezos
+	+ Book publisher: Akashic Books (Brooklyn, NY)
+	+ Book price: 120000
 
-****DATE BORROW: 10/12/2019
+****DATE BORROW: 10/10/2019
 ****DATE RETURN: 10/12/2019
 
------ DONT OVERDUE
-----> NO PAY FINE !
+----- OVERDUE: 54 DAYS
+----> PAY FINE: 540000 VND
 -----------------------------------
+
 
 *English-Book
 	+ Book id: 567
@@ -37,11 +37,11 @@
 	+ Book price: 130000
 	+ Book ISBN: 98763832133
 
-****DATE BORROW: 11/11/2019
+****DATE BORROW: 10/12/2019
 ****DATE RETURN: 10/12/2019
 
------ OVERDUE: 22 DAYS
-----> PAY FINE: 440000 VND
+----- DONT OVERDUE
+----> NO PAY FINE !
 -----------------------------------
 
-====>> TOTAL FEE PAYABLE: 440000
+====>> TOTAL FEE PAYABLE: 540000
