@@ -9,7 +9,7 @@
 ****READER: name: Vo Minh tan
 
 -----------------------------------
-------> TOTAL PAYFINE: 720000
+------> TOTAL PAYFINE: 990000
 
 -----------------------------------
 **READER INFORMATONS: 
@@ -19,7 +19,17 @@
 ****READER: name: Nguyen Quoc Thai
 
 -----------------------------------
-------> TOTAL PAYFINE: 440000
+------> TOTAL PAYFINE: 660000
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+
+****READER: id: 18120567
+****READER: name: Pham Xuan Thanh
+
+-----------------------------------
+------> TOTAL PAYFINE: 40000
 
 -----------------------------------
 **READER INFORMATONS: 
@@ -29,7 +39,7 @@
 ****READER: name: Hong Minh Thang
 
 -----------------------------------
-------> TOTAL PAYFINE: 540000
+------> TOTAL PAYFINE: 670000
 
 -----------------------------------
 **READER INFORMATONS: 
@@ -39,5 +49,15 @@
 ****READER: name: Nguyen Le Ngoc Tan
 
 -----------------------------------
-------> TOTAL PAYFINE: 540000
+------> TOTAL PAYFINE: 630000
+
+-----------------------------------
+**READER INFORMATONS: 
+-----------------------------------
+
+****READER: id: 18120584
+****READER: name: Pham Dinh Thuc
+
+-----------------------------------
+------> TOTAL PAYFINE: 80000
 

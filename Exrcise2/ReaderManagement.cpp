@@ -198,14 +198,14 @@ void ReaderManagement::print_bill_borrow(string _reader_id)
 	vector <int > result =  find_by_id(_reader_id);
 
 	if (!result.size()) {
-		cout << "----> NOT FOUND READER ID !" << endl << endl;
+		cout << "\n----> NOT FOUND READER ID !" << endl << endl;
 		return;
 	}
 	else {
 		for (int i = 0; i < result.size(); i++) {
 			list_reader.at(result.at(i))->print_bill_borrow(list_reader.at(result.at(i))->get_id());
 		}
-		cout << "----> DONE !" << endl << endl;
+		cout << "\n----> DONE !" << endl << endl;
 	}
 }
 
@@ -214,14 +214,14 @@ void ReaderManagement::print_bill_return(string _reader_id)
 	vector <int > result = find_by_id(_reader_id);
 
 	if (!result.size()) {
-		cout << "----> NOT FOUND READER ID !" << endl << endl;
+		cout << "\n----> NOT FOUND READER ID !" << endl << endl;
 		return;
 	}
 	else {
 		for (int i = 0; i < result.size(); i++) {
 			list_reader.at(result.at(i))->print_bill_return(list_reader.at(result.at(i))->get_id());
 		}
-		cout << "----> DONE !" << endl << endl;
+		cout << "\n----> DONE !" << endl << endl;
 	}
 }
 
@@ -252,6 +252,8 @@ void ReaderManagement::list_reader_overdue(string _file_name)
 
 	time_t cur_time = time(0);
 	tm* local = gmtime(&cur_time);
+
+	system("cls");
 
 	out_file << "\n******** LIST READER OVERDUE ***********\n\n";
 	cout << "\n******** LIST READER OVERDUE ***********\n\n";
@@ -287,12 +289,16 @@ void ReaderManagement::update_menu(int i)
 	while (1) {
 		system("cls");
 
-		cout << "\n**UPDATE READER\n\n";
-		cout<< "*1: Change ID \n"
-			<< "*2: Change Name \n"
-			<< "*0: No change ! \n\n"
-			<< "+ You choose ?  \n\n"
-			<< ">> ";
+		cout <<"\t\t\t\t_____________________________________________________________" << endl
+			<< "\t\t\t\t|                    U P D A T E _ R E A D E R              |" << endl
+			<< "\t\t\t\t|-----------------------------------------------------------|" << endl
+			<< "\t\t\t\t|1.  Change ID                                              |" << endl
+			<< "\t\t\t\t|2.  Change Name                                            |" << endl
+			<< "\t\t\t\t|0.  No change !                                            |" << endl
+			<< "\t\t\t\t|-----------------------------------------------------------|" << endl
+			<< "\t\t\t\t|>>  You choose ?                                           |" << endl
+			<< "\t\t\t\t|___________________________________________________________|" << endl
+			<< "\n\t\t\t\t>> ";
 
 		cin >> choose;
 		cin.ignore();

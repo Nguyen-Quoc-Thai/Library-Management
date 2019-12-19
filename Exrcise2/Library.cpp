@@ -16,6 +16,20 @@ void Library::update_menu(int i)
 	while (1) {
 		system("cls");
 
+		cout <<"\t\t\t\t_____________________________________________________________" << endl
+			<< "\t\t\t\t|                     U P D A T E _ B O O K                 |" << endl
+			<< "\t\t\t\t|-----------------------------------------------------------|" << endl
+			<< "\t\t\t\t|1.  Change ID                                              |" << endl
+			<< "\t\t\t\t|2.  Change Name                                            |" << endl
+			<< "\t\t\t\t|3.  Change Author                                          |" << endl
+			<< "\t\t\t\t|4.  Change Publisher                                       |" << endl
+			<< "\t\t\t\t|5.  Change Price                                           |" << endl
+			<< "\t\t\t\t|0.  No change !                                            |" << endl
+			<< "\t\t\t\t|-----------------------------------------------------------|" << endl
+			<< "\t\t\t\t|>>  You choose ?                                           |" << endl
+			<< "\t\t\t\t|___________________________________________________________|" << endl
+			<< "\n\t\t\t\t>> ";
+
 		cout << "\n **UPDATE BOOK \n";
 		cout<< "\n+ 1: Change ID \n"
 			<< "+ 2: Change Name \n"

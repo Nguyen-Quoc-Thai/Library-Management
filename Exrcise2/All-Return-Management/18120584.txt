@@ -22,10 +22,10 @@
 	+ Book price: 230000
 
 ****DATE BORROW: 10/12/2019
-****DATE RETURN: 10/12/2019
+****DATE RETURN: 19/12/2019
 
------ DONT OVERDUE
-----> NO PAY FINE !
+----- OVERDUE: 2 DAYS
+----> PAY FINE: 20000 VND
 -----------------------------------
 
 
@@ -37,11 +37,11 @@
 	+ Book price: 120000
 
 ****DATE BORROW: 06/12/2019
-****DATE RETURN: 10/12/2019
+****DATE RETURN: 19/12/2019
 
------ DONT OVERDUE
-----> NO PAY FINE !
+----- OVERDUE: 6 DAYS
+----> PAY FINE: 60000 VND
 -----------------------------------
 
 
-====>> TOTAL FEE PAYABLE: 0
+====>> TOTAL FEE PAYABLE: 80000

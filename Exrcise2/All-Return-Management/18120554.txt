@@ -23,10 +23,10 @@
 	+ Book ISBN: 9875643277
 
 ****DATE BORROW: 10/12/2019
-****DATE RETURN: 10/12/2019
+****DATE RETURN: 19/12/2019
 
------ DONT OVERDUE
-----> NO PAY FINE !
+----- OVERDUE: 2 DAYS
+----> PAY FINE: 40000 VND
 -----------------------------------
 
 *English-Book
@@ -38,10 +38,10 @@
 	+ Book ISBN: 98763832133
 
 ****DATE BORROW: 11/11/2019
-****DATE RETURN: 10/12/2019
+****DATE RETURN: 19/12/2019
 
------ OVERDUE: 22 DAYS
-----> PAY FINE: 440000 VND
+----- OVERDUE: 31 DAYS
+----> PAY FINE: 620000 VND
 -----------------------------------
 
-====>> TOTAL FEE PAYABLE: 440000
+====>> TOTAL FEE PAYABLE: 660000
